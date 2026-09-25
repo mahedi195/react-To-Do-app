@@ -42,10 +42,19 @@ function ToDO() {
             {/* task quickly views section*/}
 
             <div className='task_views'>
-                <button className='today_task' >Today</button>
-                <button className='upcoming_task'>Upcoming</button>
-                <button className='all_task'>All Tasks</button>
-                <button className='completed_task'>Completed</button>
+                <button className='today_task' >📅 Today</button>
+                <button className='upcoming_task'>📆 Upcoming</button>
+                <button className='all_task'>📆 All Tasks</button>
+                <button className='completed_task'>✓ Completed</button>
+            </div>
+
+            {/*search task and add button */}
+
+            <div className='search_task_and_add_task'>
+
+                <input type='text' placeholder='Search tasks....' className='search_task'></input>
+                <button className='add_task'>Add Task</button>
+
             </div>
 
 

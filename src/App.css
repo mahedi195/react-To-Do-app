@@ -133,19 +133,41 @@ body {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    
+
+    display: flex;
+    margin-bottom: 12px;
+
 }
 
 
 .task_views button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px 18px;
     border-radius: 5px;
     outline: 0;
     border: 1px solid #dddddd;
     margin-right: 10px;
+    flex: 1;
+    cursor: pointer;
 }
 
-.task_views button:hover{
+.task_views button:hover {
     background-color: #ddd;
+}
+
+
+
+
+
+/*
+=============== search_task  and add_task =========================================
+*/
+
+
+.search_task_and_add_task .search_task{
+
+}
+
+.search_task_and_add_task .add_task{
+    
 }
