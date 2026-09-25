@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.container {
+    width: 700px;
+    max-width: 90%;
+    height: 700px;
+    /* border: 1px solid red; */
+    /* padding: 20px; */
+    margin: 50px auto;
+    /* background-color: gray; */
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+body {
+    background-color: rgb(216, 216, 216);
+}
+
+
+.appHeading img {
+    width: 35px;
+    height: 35px;
+
+}
+
+.appHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 12px 0px 12px;
+    border: 1px solid red;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.todo_image_and_text {
+    display: flex;
+    align-items: center;
+}
+
+
+.todo_image_and_text h2 {
+    margin-left: 10px;
+}
+
+
+.darkMode {
+    position: absolute;
+    right: 8px;
+    border-radius: 50%
+}
+
+
+
+
+
+
+
+
+/*
+=================================  Progress Section =======================================
+*/
+
+.ProgressCircle {
+    width: 100px;
+    height: 100px;
+    border: 1px solid green;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: orange;
+}
+
+
+
+.progressSection {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    border: 1ps solid red;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+
+.progressDone_and_progressline h2 {
+    margin-bottom: 10px;
+}
+
+.progressDone_and_progressline p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.progressLine {
+    /*width: 100%; */
+    height: 5px;
+    background-color: red;
+    border-radius: 10px;
+}
+
+
+.progressDone_and_progressline {
+    flex: 1;
+}
+
+.ProgressCircle p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+/*
+================================ Task views section ====================================
+*/
+
+.task_views {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+
+.task_views button {
+    font-size: 20px;
+    padding: 5px 18px;
+    border-radius: 5px;
+    outline: 0;
+    border: 1px solid #dddddd;
+    margin-right: 10px;
+}
+
+.task_views button:hover{
+    background-color: #ddd;
+}
