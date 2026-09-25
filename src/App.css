@@ -9,7 +9,7 @@
 .container {
     width: 700px;
     max-width: 90%;
-    height: 700px;
+    min-height: 700px;
     /* border: 1px solid red; */
     /* padding: 20px; */
     margin: 50px auto;
@@ -98,19 +98,21 @@ body {
 
 
 .progressDone_and_progressline h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .progressDone_and_progressline p {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 7px;
 }
 
+
 .progressLine {
-    /*width: 100%; */
+    width: 95%;
     height: 5px;
     background-color: red;
     border-radius: 10px;
+    margin-bottom: 5px;
 }
 
 
@@ -123,33 +125,33 @@ body {
     font-weight: bold;
 }
 
-
+.ovedue_task {
+    /*margin-top: 10px;*/
+}
 
 /*
 ================================ Task views section ====================================
 */
 
 .task_views {
-    padding: 12px;
-    border: 1px solid #ddd;
+    /* padding: 8px; */
+    /* border: 1px solid #ddd; */
     border-radius: 5px;
-
     display: flex;
     margin-bottom: 12px;
-
+    /* font-size: 15px; */
+    gap: 10px;
 }
 
 
 .task_views button {
-    font-size: 18px;
-    padding: 5px 18px;
+    font-size: 15px;
+    padding: 5px;
     border-radius: 5px;
-    outline: 0;
-    border: 1px solid #dddddd;
-    margin-right: 10px;
+    border: 1px solid #ddd;
     flex: 1;
-    cursor: pointer;
 }
+
 
 .task_views button:hover {
     background-color: #ddd;
@@ -164,10 +166,169 @@ body {
 */
 
 
-.search_task_and_add_task .search_task{
+.search_task_and_add_task {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* outline: 0; */
+    /* overflow: hidden;*/
+    margin-bottom: 12px;
+}
+
+.search_task_and_add_task .search_task {
+    flex: 1;
+}
+
+
+.search_task_and_clear_search {
+    flex: 1;
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.search_task_and_clear_search .clear_search {
+    position: absolute;
+    right: 5px;
+    font-size: 1.4em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
 
 }
 
-.search_task_and_add_task .add_task{
-    
+
+
+.search_task_and_add_task .add_task {
+    font-size: 15px;
+
+
+}
+
+
+.search_task_and_add_task .search_task,
+.search_task_and_add_task .add_task {
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    outline: 0;
+    border: 0;
+}
+
+.search_task_and_add_task .add_task:hover {
+    background-color: #c2c2c2;
+    cursor: pointer;
+}
+
+.search_task_and_add_task .search_task {}
+
+
+
+/*
+================================ Add task form ===============================
+*/
+
+
+.add_task_form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.add_task_form h2 {
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+
+
+
+
+
+.add_task_form div {
+    margin-bottom: 20px;
+
+}
+
+.add_task_form div p {
+    font-weight: bold;
+    font-size: 1.1em;
+        margin-bottom: 5px;
+
+}
+
+.add_task_form input,
+.add_task_form textarea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: 0;
+    font-size: 15px;
+    padding: 8px 20px;
+    /* flex: 1; */
+    width: 100%;
+
+}
+
+
+.add_task_form textarea {
+    min-height: 50px;
+}
+
+
+.due_date_and_priority_and_category_and_status {
+    display: flex;
+    gap: 10px;
+
+}
+
+.due_date_and_priority_and_category_and_status button {
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    /*gap: 10px;*/
+
+
+}
+
+
+/*
+============================= cancel_and_add_task ======================================
+*/
+
+.cancel_button_and_add_task_button {
+
+    display: flex;
+    gap: 10px;
+
+}
+
+.cancel_button_and_add_task_button .cancel {
+
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    /*gap: 10px;*/
+
+}
+
+.cancel_button_and_add_task_button .add_task {
+
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    /*gap: 10px;*/
+
+
 }

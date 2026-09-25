@@ -28,8 +28,11 @@ function ToDO() {
                 <div className='progressDone_and_progressline'>
                     <h2>Task Progress</h2>
                     <p>40% done</p>
+
                     <p className='progressLine'></p>
+                    <p className='ovedue_task'>overdue 2 tasks</p>
                 </div>
+
                 <div className='ProgressCircle'>
                     <p>4/10</p>
 
@@ -52,8 +55,54 @@ function ToDO() {
 
             <div className='search_task_and_add_task'>
 
-                <input type='text' placeholder='Search tasks....' className='search_task'></input>
+
+                <div className='search_task_and_clear_search'>
+                    <input type='text' placeholder='Search tasks....' className='search_task'></input>
+                    <button className='clear_search'>X</button>
+                </div>
+
                 <button className='add_task'>Add Task</button>
+
+            </div>
+
+
+            {/*Add task form*/}
+            <div className='add_task_form'>
+                <h2>Add New Task</h2>
+
+
+                <div>
+                    <p>Task Name : </p>
+                    <input type='text' placeholder='Enter Task Name...'></input>
+                </div>
+
+
+                <div>
+                    <p>Description</p>
+                    <textarea placeholder='Enter Task Description...(max 500 charcater)'></textarea>
+                </div>
+
+
+
+
+
+                {/* due_date priority and category and status  */}
+
+                <div className='due_date_and_priority_and_category_and_status'>
+                    <button className=''>Due Date</button>
+                    <button className=''>Priority</button>
+                    <button className=''>Category</button>
+
+                </div>
+
+                {/*cancel and add task */}
+                <div className='cancel_button_and_add_task_button'>
+                    <button className='cancel'>Cancel</button>
+                    <button className='add_task'>Add Task</button>
+
+
+                </div>
+
 
             </div>
 
