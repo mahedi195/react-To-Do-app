@@ -109,7 +109,7 @@ function ToDO() {
                 <div className='due_date_and_priority_and_category_and_status'>
                     <button className=''>Due Date</button>
                     <button className=''>Priority</button>
-                    <button className=''>Category</button>
+                    {/*                 <button className=''>Category</button>               */}
 
                 </div>
 
@@ -125,58 +125,58 @@ function ToDO() {
             </div>
 
 
-            <div className='add_filters'>
+
+            <div className='filter_section'>
                 <div className='filter_top_line'>
                     <h2>Add Filters</h2>
                     <button>Clear Filters</button>
                 </div>
 
 
-                <div className='filter'>
+                <div className='all_filters'>
 
-                    <select className='status_filter' defaultValue="">
-                        <option value="">All Status</option>
-                        <option value="all">All</option>
-                        <option value="active">Active</option>
-                        <option value="completed">Completed</option>
-
-                    </select>
-
-                    <select className='priority_filter'>
-                        <option value=''>All Priority</option>
-                        <option value='low'>Low</option>
-                        <option value='medium'>Medium</option>
-                        <option value='high'>High</option>
-
-                    </select>
+                    <div className='status_filter'>
+                        <button>All Status</button>
+                        <ul>
+                            <li>All</li>
+                            <li>Active</li>
+                            <li>Completed</li>
+                        </ul>
+                    </div>
 
 
 
-                    <select className='sorting_filter'>
-                        <option value="">Sort By</option>
-                        <option value="nearest_task">Nearest First</option>
-                        <option value="oldest_task">Oldest First</option>
-                        <option value="due_date_nearest">Due Date : Nearest</option>
-                        <option value="due_date_latest">Due Date : Latest</option>
-                        <option value="priority_high_to_low">Priority : High to Low</option>
-                        <option value="priority_low_to_high">Priority : Low to High</option>
+                    <div className='priority_filter'>
+                        <button>All priority</button>
+                        <ul>
+                            <li>Low</li>
+                            <li>Medium</li>
+                            <li>High</li>
+                        </ul>
+                    </div>
 
 
-                    </select>
+                    <div className='sorting_filter'>
+                        <button>Sort By</button>
+                        <ul>
+                            <li>Newest</li>
+                            <li>Oldest</li>
+                            <li>Priority : Low to High</li>
+                            <li>Priority : High to Low</li>
+                            <li>Due Date : Nearest</li>
+                            <li>Due Date : Oldest</li>
+                        </ul>
+                    </div>
 
 
-                    <select className='category_filter'>
-                        <option value="">All Category</option>
-                        <option value="study">Study</option>
-                        <option value="study">Work</option>
-                        <option value="study">Personal</option>
-                        <option value="study">Others</option>
-
-                    </select>
 
                 </div>
 
+
             </div>
+
+
+            {/*                                                   */}
 
             <div className='task_show'>
                 <h2>Tasks</h2>

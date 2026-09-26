@@ -386,23 +386,23 @@ body {
 /* =======================================Add Filter =================================*/
 
 
-.add_filters {
+.filter_section {
     border: 1px solid teal;
     padding: 10px;
     border-radius: 5px;
 }
 
-.add_filters .filter_top_line {
+.filter_section .filter_top_line {
     margin-top: 10px;
 }
 
 
-.add_filters .filter_top_line h2 {
+.filter_section .filter_top_line h2 {
     color: #004D40;
     font-size: 20px;
 }
 
-.add_filters .filter_top_line {
+.filter_section .filter_top_line {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -410,7 +410,7 @@ body {
 
 }
 
-.add_filters button {
+.filter_section button {
     cursor: pointer;
     padding: 5px 12px;
     font-size: 15px;
@@ -423,52 +423,101 @@ body {
 
 
 
-.add_filters button:hover {
+.filter_section button:hover {
     background-color: #004D40;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     color: white;
 }
+
 
 /*============================= Filter =================================*/
 
-.filter {
+
+
+.all_filters {
     display: flex;
     gap: 10px;
-    margin-bottom: 10px;
 }
 
-select {
+
+.all_filters>div {
     flex: 1;
-    padding: 5px;
-    font-size: 15px;
+    position: relative;
+
+}
+
+
+.all_filters ul {
+    list-style-type: none;
+
+}
+
+.all_filters button {
+    width: 100%;
+    padding: 8px;
+    /* font-size: 15px; */
+    /* border: 1px solid #ddd; */
+    /* border-radius: 5px;*/
+    /*  font-size: 15px;
     border-radius: 5px;
     border: 1px solid #ddd;
-    cursor: pointer;
-    /*gap: 10px;*/
 
     background-color: teal;
+    color: white; */
+
+}
+
+.all_filters:hover {
+    /* background-color: #004D40; */
+}
+
+
+.all_filters ul {
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    /* margin: 0; */
+    /* padding: 0; */
+    display: none;
+}
+
+
+.all_filters>div:hover ul {
+    display: block;
+     background-color: teal;
+
+}
+
+.all_filters li {
+    padding: 8px;
+      
     color: white;
-    min-width: 0px;
-}
-
-
-select:hover {
-    background-color: #004D40;
     cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    color: white;
 }
 
-select option {
-    cursor: pointer;
-    background-color: white;
+.all_filters li:hover {
+     background-color: rgb(70, 214, 240);
+     transition: all 0.2s ease-in-out;
 }
 
 
-select option:hover {
-    background-color: red;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -545,7 +594,7 @@ select option:hover {
 
 .task_show .tasks_details .deleteImage {
 
-  /*  display: flex;
+    /*  display: flex;
     align-items: center;*/
 }
 
