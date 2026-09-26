@@ -1,6 +1,11 @@
 import todoImage from './assets/todoImage.jpg'
 import darkModeImage from './assets/darkMode.png'
 import './App.css'
+import editImage from './assets/edit.png'
+import deleteImage from './assets/delete.png'
+import bottom_arrow from './assets/bottom_arrow.png'
+
+
 
 function ToDO() {
 
@@ -13,7 +18,7 @@ function ToDO() {
             <div className='appHeading'>
                 <div className='todo_image_and_text'>
                     <img src={todoImage} className='todo_image' />
-                    <h2>MY TASKS</h2>
+                    <h2>My To-Do List</h2>
                 </div>
                 <img src={darkModeImage} className='darkMode'></img>
             </div>
@@ -61,7 +66,7 @@ function ToDO() {
                     <button className='clear_search'>X</button>
                 </div>
 
-                <button className='add_task'>Add Task</button>
+                <button className='add_task'>+ Add Task</button>
 
             </div>
 
@@ -108,10 +113,71 @@ function ToDO() {
 
 
 
+            <div className='filter'>
+
+                <select className='status_filter' defaultValue="">
+                    <option value="">All Status</option>
+                    <option value="all">All</option>
+                    <option value="active">Active</option>
+                    <option value="completed">Completed</option>
+
+                </select>
+
+                <select className='priority_filter'>
+                    <option value=''>All Priority</option>
+                    <option value='low'>Low</option>
+                    <option value='medium'>Medium</option>
+                    <option value='high'>High</option>
+
+                </select>
 
 
 
+                <select className='sorting_filter'>
+                    <option value="">Sort By</option>
+                    <option value="nearest_task">Nearest First</option>
+                    <option value="oldest_task">Oldest First</option>
+                    <option value="due_date_nearest">Due Date : Nearest</option>
+                    <option value="due_date_latest">Due Date : Latest</option>
+                    <option value="priority_high_to_low">Priority : High to Low</option>
+                    <option value="priority_low_to_high">Priority : Low to High</option>
 
+
+                </select>
+
+
+                <select className='category_filter'>
+                    <option value="">All Category</option>
+                    <option value="study">Study</option>
+                    <option value="study">Work</option>
+                    <option value="study">Personal</option>
+                    <option value="study">Others</option>
+
+                </select>
+
+            </div>
+
+            <div className='task_show'>
+                <h2>Tasks</h2>
+                <div className='tasks_details'>
+                    <input type='checkbox' />
+                    <span className='task'>Learn React
+                        <img src={bottom_arrow} />
+                    </span>
+                    <span className='date'>25 sept, 2026</span>
+                    <span className='priority'>High</span>
+                    <span className='category'>Study</span>
+
+                    <button><img src={editImage}></img></button>
+                    <button><img src={deleteImage}></img></button>
+                </div>
+
+            </div>
+
+
+            <div className='task_description'>
+                <p>Use state hook, array object ....</p>
+            </div>
 
 
         </div>

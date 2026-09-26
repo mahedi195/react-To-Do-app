@@ -7,7 +7,7 @@
 
 
 .container {
-    width: 700px;
+    width: 520px;
     max-width: 90%;
     min-height: 700px;
     /* border: 1px solid red; */
@@ -234,6 +234,9 @@ body {
 .add_task_form {
     margin-top: 50px;
     margin-bottom: 50px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
 
 }
 
@@ -256,7 +259,7 @@ body {
 .add_task_form div p {
     font-weight: bold;
     font-size: 1.1em;
-        margin-bottom: 5px;
+    margin-bottom: 5px;
 
 }
 
@@ -296,6 +299,9 @@ body {
 
 }
 
+.add_task_form button:hover {
+    background-color: #c7c6c6;
+}
 
 /*
 ============================= cancel_and_add_task ======================================
@@ -305,6 +311,7 @@ body {
 
     display: flex;
     gap: 10px;
+    margin-top: 60px;
 
 }
 
@@ -331,4 +338,119 @@ body {
     /*gap: 10px;*/
 
 
+}
+
+
+
+
+
+
+/*============================= Filter =================================*/
+
+.filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+select {
+    flex: 1;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    /*gap: 10px;*/
+    background-color: hsl(0, 0%, 93%);
+    min-width: 0px;
+}
+
+
+select:hover {
+    background-color: #bbbbbb;
+}
+
+select option {
+    cursor: pointer;
+    background-color: white;
+}
+
+
+select option:hover {
+    background-color: red;
+}
+
+
+
+
+
+/*================ task show =========================*/
+.task_show {
+    /*border: 1px solid #ddd; */
+    /* padding: 10px; */
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.task_show .tasks_details {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+
+.task_show .tasks_details input[type='checkbox'] {
+    margin-right: 5px;
+}
+
+
+.task_show .tasks_details .task {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px
+
+}
+
+
+.task_show .tasks_details .task img{
+    height: 16px;
+    width: 16px;
+}
+.task_show .tasks_details .date {
+    width: 110px;
+}
+
+
+.task_show .tasks_details .priority,
+.task_show .tasks_details .category {
+    width: 50px;
+}
+
+
+
+
+
+.task_show .tasks_details button {
+    border: 0;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.task_show .tasks_details button:hover {
+    background-color: red;
+    border-radius: 5px;
+}
+
+.task_show .tasks_details img {
+    width: 25px;
+    height: 25px;
 }
