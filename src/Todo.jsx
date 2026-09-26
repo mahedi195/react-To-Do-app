@@ -1,10 +1,13 @@
-import todoImage from './assets/todoImage.jpg'
+import todoImage from './assets/todo.jpg'
 import darkModeImage from './assets/darkMode.png'
 import './App.css'
 import editImage from './assets/edit.png'
 import deleteImage from './assets/delete.png'
 import bottom_arrow from './assets/bottom_arrow.png'
 
+import today from './assets/today.jpg'
+import upcoming from './assets/upcoming.webp'
+import all_task from './assets/all_task.webp'
 
 
 function ToDO() {
@@ -50,9 +53,19 @@ function ToDO() {
             {/* task quickly views section*/}
 
             <div className='task_views'>
-                <button className='today_task' >📅 Today</button>
-                <button className='upcoming_task'>📆 Upcoming</button>
-                <button className='all_task'>📆 All Tasks</button>
+                <button className='today_task' >
+                    <img src={today} className='today_image' />
+                    Today
+                </button>
+
+                <button className='upcoming_task'>
+                    <img src={upcoming} className='upcoming_image' />
+                    Upcoming</button>
+
+                <button className='all_task'>
+                    <img src={all_task} className='all_task_image' />
+                    All Tasks</button>
+
                 <button className='completed_task'>✓ Completed</button>
             </div>
 
@@ -112,48 +125,56 @@ function ToDO() {
             </div>
 
 
-
-            <div className='filter'>
-
-                <select className='status_filter' defaultValue="">
-                    <option value="">All Status</option>
-                    <option value="all">All</option>
-                    <option value="active">Active</option>
-                    <option value="completed">Completed</option>
-
-                </select>
-
-                <select className='priority_filter'>
-                    <option value=''>All Priority</option>
-                    <option value='low'>Low</option>
-                    <option value='medium'>Medium</option>
-                    <option value='high'>High</option>
-
-                </select>
+            <div className='add_filters'>
+                <div className='filter_top_line'>
+                    <h2>Add Filters</h2>
+                    <button>Clear Filters</button>
+                </div>
 
 
+                <div className='filter'>
 
-                <select className='sorting_filter'>
-                    <option value="">Sort By</option>
-                    <option value="nearest_task">Nearest First</option>
-                    <option value="oldest_task">Oldest First</option>
-                    <option value="due_date_nearest">Due Date : Nearest</option>
-                    <option value="due_date_latest">Due Date : Latest</option>
-                    <option value="priority_high_to_low">Priority : High to Low</option>
-                    <option value="priority_low_to_high">Priority : Low to High</option>
+                    <select className='status_filter' defaultValue="">
+                        <option value="">All Status</option>
+                        <option value="all">All</option>
+                        <option value="active">Active</option>
+                        <option value="completed">Completed</option>
+
+                    </select>
+
+                    <select className='priority_filter'>
+                        <option value=''>All Priority</option>
+                        <option value='low'>Low</option>
+                        <option value='medium'>Medium</option>
+                        <option value='high'>High</option>
+
+                    </select>
 
 
-                </select>
+
+                    <select className='sorting_filter'>
+                        <option value="">Sort By</option>
+                        <option value="nearest_task">Nearest First</option>
+                        <option value="oldest_task">Oldest First</option>
+                        <option value="due_date_nearest">Due Date : Nearest</option>
+                        <option value="due_date_latest">Due Date : Latest</option>
+                        <option value="priority_high_to_low">Priority : High to Low</option>
+                        <option value="priority_low_to_high">Priority : Low to High</option>
 
 
-                <select className='category_filter'>
-                    <option value="">All Category</option>
-                    <option value="study">Study</option>
-                    <option value="study">Work</option>
-                    <option value="study">Personal</option>
-                    <option value="study">Others</option>
+                    </select>
 
-                </select>
+
+                    <select className='category_filter'>
+                        <option value="">All Category</option>
+                        <option value="study">Study</option>
+                        <option value="study">Work</option>
+                        <option value="study">Personal</option>
+                        <option value="study">Others</option>
+
+                    </select>
+
+                </div>
 
             </div>
 
@@ -168,8 +189,8 @@ function ToDO() {
                     <span className='priority'>High</span>
                     <span className='category'>Study</span>
 
-                    <button><img src={editImage}></img></button>
-                    <button><img src={deleteImage}></img></button>
+                    <button className='editImage'><img src={editImage}></img></button>
+                    <button className='deleteImage'><img src={deleteImage}></img></button>
                 </div>
 
             </div>

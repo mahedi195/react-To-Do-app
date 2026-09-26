@@ -37,9 +37,11 @@ body {
     justify-content: center;
     position: relative;
     margin: 12px 0px 12px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 8px;
     border-radius: 5px;
+    background-color: teal;
+    color: white;
 }
 
 .todo_image_and_text {
@@ -56,7 +58,8 @@ body {
 .darkMode {
     position: absolute;
     right: 8px;
-    border-radius: 50%
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 
@@ -73,14 +76,12 @@ body {
 .ProgressCircle {
     width: 100px;
     height: 100px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: orange;
+    background-color: tan;
 }
 
 
@@ -90,10 +91,12 @@ body {
     padding: 20px;
     gap: 20px;
     justify-content: space-between;
-    border: 1ps solid red;
-    border: 1px solid red;
+
     border-radius: 5px;
     margin-bottom: 12px;
+
+    background: teal;
+    color: white;
 }
 
 
@@ -110,7 +113,7 @@ body {
 .progressLine {
     width: 95%;
     height: 5px;
-    background-color: red;
+    background-color: white;
     border-radius: 10px;
     margin-bottom: 5px;
 }
@@ -154,11 +157,25 @@ body {
 
 
 .task_views button:hover {
-    background-color: #ddd;
+    background-color: #004D40;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 
+.task_views button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: teal;
+    color: white;
+}
 
+.task_views img {
+    width: 25px;
+    height: 25px;
+}
 
 
 /*
@@ -168,11 +185,11 @@ body {
 
 .search_task_and_add_task {
     display: flex;
-    border: 1px solid #ddd;
     border-radius: 5px;
     /* outline: 0; */
     /* overflow: hidden;*/
     margin-bottom: 12px;
+    border: 1px solid teal;
 }
 
 .search_task_and_add_task .search_task {
@@ -191,11 +208,12 @@ body {
 
 .search_task_and_clear_search .clear_search {
     position: absolute;
-    right: 5px;
+    right: 10px;
     font-size: 1.4em;
     border: none;
     background: transparent;
     cursor: pointer;
+    color: #636161;
 
 }
 
@@ -203,24 +221,34 @@ body {
 
 .search_task_and_add_task .add_task {
     font-size: 15px;
+    background-color: teal;
+    color: white;
 
 
 }
-
 
 .search_task_and_add_task .search_task,
 .search_task_and_add_task .add_task {
     font-size: 15px;
     padding: 8px 20px;
     border-radius: 5px;
-    outline: 0;
+    outline: none;
+    transition: all 0.2s ease-in-out;
     border: 0;
+    color: #333333
+}
+
+.search_task_and_add_task .add_task {
+    background-color: teal;
+    color: #ffffff;
 }
 
 .search_task_and_add_task .add_task:hover {
-    background-color: #c2c2c2;
+    background-color: #004D40;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
+
 
 .search_task_and_add_task .search_task {}
 
@@ -232,18 +260,22 @@ body {
 
 
 .add_task_form {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 1px solid #ddd;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid teal;
     padding: 10px;
     border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px #b4b5b5;
 
 }
 
 .add_task_form h2 {
     margin-bottom: 25px;
     text-align: center;
-
+    color: #004D40;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 
@@ -258,14 +290,20 @@ body {
 
 .add_task_form div p {
     font-weight: bold;
-    font-size: 1.1em;
+    /* font-weight: 600; */
     margin-bottom: 5px;
+    color: #004D40;
+    font-size: 20px;
 
 }
 
+
 .add_task_form input,
-.add_task_form textarea {
-    border: 1px solid #ddd;
+.add_task_form textarea,
+.add_task_form button {
+    border: 1.5px solid #669eb5;
+    background-color: #fbfdfd;
+    color: #333333;
     border-radius: 5px;
     outline: 0;
     font-size: 15px;
@@ -292,7 +330,6 @@ body {
     padding: 5px;
     font-size: 15px;
     border-radius: 5px;
-    border: 1px solid #ddd;
     cursor: pointer;
     /*gap: 10px;*/
 
@@ -300,7 +337,10 @@ body {
 }
 
 .add_task_form button:hover {
-    background-color: #c7c6c6;
+    background-color: #004D40;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
 }
 
 /*
@@ -321,7 +361,6 @@ body {
     padding: 5px;
     font-size: 15px;
     border-radius: 5px;
-    border: 1px solid #ddd;
     cursor: pointer;
     /*gap: 10px;*/
 
@@ -333,7 +372,6 @@ body {
     padding: 5px;
     font-size: 15px;
     border-radius: 5px;
-    border: 1px solid #ddd;
     cursor: pointer;
     /*gap: 10px;*/
 
@@ -345,12 +383,59 @@ body {
 
 
 
+/* =======================================Add Filter =================================*/
+
+
+.add_filters {
+    border: 1px solid teal;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add_filters .filter_top_line {
+    margin-top: 10px;
+}
+
+
+.add_filters .filter_top_line h2 {
+    color: #004D40;
+    font-size: 20px;
+}
+
+.add_filters .filter_top_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+}
+
+.add_filters button {
+    cursor: pointer;
+    padding: 5px 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+
+    background-color: teal;
+    color: white;
+}
+
+
+
+.add_filters button:hover {
+    background-color: #004D40;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
+}
+
 /*============================= Filter =================================*/
 
 .filter {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 select {
@@ -361,13 +446,18 @@ select {
     border: 1px solid #ddd;
     cursor: pointer;
     /*gap: 10px;*/
-    background-color: hsl(0, 0%, 93%);
+
+    background-color: teal;
+    color: white;
     min-width: 0px;
 }
 
 
 select:hover {
-    background-color: #bbbbbb;
+    background-color: #004D40;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color: white;
 }
 
 select option {
@@ -390,13 +480,20 @@ select option:hover {
     /* padding: 10px; */
     border-radius: 5px;
     font-size: 17px;
+    margin-top: 35px;
+}
+
+.task_show h2 {
+    color: #004D40;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 .task_show .tasks_details {
     display: flex;
     align-items: center;
-    border: 1px solid #ddd;
-    padding: 5px 10px;
+    border: 1px solid teal;
+    padding: 5px 0px 5px 10px;
     border-radius: 5px;
 
 }
@@ -413,14 +510,14 @@ select option:hover {
     display: flex;
     align-items: center;
     gap: 12px
-
 }
 
 
-.task_show .tasks_details .task img{
+.task_show .tasks_details .task img {
     height: 16px;
     width: 16px;
 }
+
 .task_show .tasks_details .date {
     width: 110px;
 }
@@ -445,9 +542,11 @@ select option:hover {
 }
 
 
-.task_show .tasks_details button:hover {
-    background-color: red;
-    border-radius: 5px;
+
+.task_show .tasks_details .deleteImage {
+
+  /*  display: flex;
+    align-items: center;*/
 }
 
 .task_show .tasks_details img {
